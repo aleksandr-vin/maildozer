@@ -1,0 +1,17 @@
+debug: yes
+do-send: yes
+mail-server: ginger.vinpn:25
+from: alex.vinokurov@evecon.co
+body-template: somefile.gtpl
+subject-template: Evecon to {{.eventname}}, deer {{.shortname}}
+to:
+  -
+    shortname: Bob
+    fullname: Bob Tornton
+    email: bob.tornton.test@evecon.co
+    eventname: Megabolts'15 !! Yeah%$!
+  -
+    shortname: Dod
+    fullname: Dod Tornton
+    email: dod.tornton.test@evecon.co
+    eventname: Supalulz'15 !! Yeah%$!
