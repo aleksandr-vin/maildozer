@@ -171,7 +171,7 @@ func SendEmail(mailServer string, userName string, password string, to []string,
 	var auth smtp.Auth = nil
 
 	if doSend {
-		log.Printf("Sending mail to %v\n", userName)
+		log.Printf("Sending mail to %v\n", to)
 		err = smtp.SendMail(
 			mailServer,
 			auth,
