@@ -37,9 +37,13 @@ func readConfig(filename string) (data []byte, err error) {
 func main() {
 	fmt.Println("Maildozer is here to send your nasty mails, BOSS...")
 
-	t := make(map[interface{}]interface{})
+	if len(os.Args) != 2 {
+		fmt.Printf("Specify config file name when calling the app!")
+		return
+	}
 
-	configData, err := readConfig("sample.yml")
+	configData, err := readConfig(os.Args[1])
+	t := make(map[interface{}]interface{})
 
 	err = yaml.Unmarshal(configData, &t)
 	if err != nil {

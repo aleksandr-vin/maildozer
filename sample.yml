@@ -7,8 +7,8 @@ subject-template: Evecon to {{.eventname}}, deer {{.shortname}}
 to:
   -
     shortname: Bob
-    fullname: Bob Tornton
-    email: bob.tornton.test@evecon.co
+    fullname: Bob Tadam
+    email: bob.tadam.test@evecon.co
     eventname: Megabolts'15 !! Yeah%$!
   -
     shortname: Dod
