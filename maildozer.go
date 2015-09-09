@@ -59,7 +59,7 @@ func main() {
 
 	var bodyTplFilename = t["body-template"].(string)
 
-	doSend := t["do-send"].(bool)
+	doSend = t["do-send"].(bool)
 
 	if t["debug"].(bool) {
 		log.Printf("Config data: %v\n", t)
@@ -170,9 +170,8 @@ func SendEmail(mailServer string, userName string, password string, to []string,
 	//auth := smtp.PlainAuth("", userName, password, host)
 	var auth smtp.Auth = nil
 
-	err = nil
-
 	if doSend {
+		log.Printf("Sending mail to %v\n", userName)
 		err = smtp.SendMail(
 			mailServer,
 			auth,
